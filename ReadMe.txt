@@ -1,46 +1,45 @@
 ﻿========================================================================
-    Anthony : PlayStation1/2 メモリーカードユーティリティー
+    Anthony : PlayStation1/2 Memory Card Utility
 ========================================================================
-このソフトは？
-	Sony製家庭用ゲーム機PlayStation1/2用のメモリーカードのデータをPCで読み書きするソフトです。
-	メモリーカードを読み書きするためのアダプタとして、Sony製PlayStation3用メモリーカードアダプターCECHZM1を使用します。
-	対応しているメモリーカードはPlayStation1/2用です。
+What is this software?
+	This software reads and writes data from/to memory cards for Sony's home video game consoles, PlayStation 1 and 2, using a PC.
+	It uses the Sony PlayStation 3 Memory Card Adaptor (CECHZM1) as the adaptor to read and write the memory cards.
+	The supported memory cards are for PlayStation 1 and 2.
 	
-対応OS
-	Win8以降
-	ver0.3.0.1より、Win7はサポート外となりました。
-使い方
-	まずCECHZM1用ドライバーとしてWinUSBをインストールします。
-		CECHZM1をUSBポートに接続し、ドライバーのインストールが求められたら
-			「コンピュータを参照してドライバーを検索」
-			「コンピュータ上の利用可能なドライバーの一覧から選択します」
-			「ユニバーサル シリアル バス デバイス」
-			WinUSBデバイス→WinUSBデバイス
-			の順に選択してインストールします。
+Supported OS
+	Win8 or later
+	From ver0.3.0.1 onwards, Win7 is no longer supported.
+How to use
+	First, install WinUSB as the driver for CECHZM1.
+		Connect the CECHZM1 to a USB port, and when prompted to install the driver:
+			"Browse my computer for drivers"
+			"Let me pick from a list of available drivers on my computer"
+			"Universal Serial Bus devices"
+			Select "WinUSB Device" -> "WinUSB Device" in order, and install.
 
-	次に、
-	・PS1メモリーカードを使う場合は、Anthony.exeを起動します。
-	・PS2メモリーカードを使う場合は、AnthonyPS2.exeを起動します。
+	Next,
+	・If using a PS1 memory card, launch Anthony.exe.
+	・If using a PS2 memory card, launch AnthonyPS2.exe.
 
-		メモリカードからデータを読み込む場合は、"from Card"ボタンをクリックします。
-		PC上のファイルからデータを読み込む場合は、"from File"ボタンをクリックし、読み込むファイルを選択します。
+		To read data from a memory card, click the "from Card" button.
+		To read data from a file on the PC, click the "from File" button and select the file to read.
 
-		メモリーカードにデータを書き込む場合は、メモリーカードかファイルからデータを読み込んだ後、"to Card"ボタンをクリックします。
-		PCにデータを保存する場合は、メモリーカードかファイルからデータを読み込んだ後、"to File"ボタンをクリックし保存先を指定します。
+		To write data to a memory card, click the "to Card" button after reading data from either a memory card or a file.
+		To save data to the PC, click the "to File" button and specify the save destination after reading data from either a memory card or a file.
 
-	対応形式
-		対応しているPS1用ファイル形式は、PSM形式(128KB)です。
-		対応しているPS2用ファイル形式は、PS2形式(8MB)です。
+	Supported Formats
+		The supported file format for PS1 is the PSM format (128KB).
+		The supported file format for PS2 is the PS2 format (8MB).
 
-開発動機
-	既にある同様のソフトは、Win7以降で使う上で不便な面があるため。
-	ソースコードを公開することで、後世に資料を残す。
+Motivation for Development
+	Existing similar software has inconvenient aspects when used on Win7 or later.
+	By releasing the source code, I intend to leave resources for future generations.
 
-開発環境
-	Ver0.3.0.3現在:
-		Visual Studio 2022(17.12.3)
-			要追加インストール
-			・最新の v143 ビルド ツール用 C++ ATL(x86 および x64)
-			・MSVC v143 - VS 2022 C++ x64/x86 ビルドツール(最新)
-謝辞
-	PS2用メモリーカードの読み書きにjimmikaelkael氏のps3mca-toolのコードを利用しています。
+Development Environment
+	As of Ver0.3.0.3:
+		Visual Studio 2026 (18.6.1)
+			Required additional installations:
+			・C++ ATL for latest v145 build tools (x86 & x64)
+			・MSVC v145 - VS 2022 C++ x64/x86 build tools (Latest)
+Acknowledgments
+	The code from jimmikaelkael's ps3mca-tool is used for reading and writing PS2 memory cards.
