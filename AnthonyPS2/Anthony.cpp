@@ -810,7 +810,7 @@ BOOL UpdateDataList(PS2MEMORYCARD* data)
 			char strTitle[sizeof(buf_icon_sys->title_name_of_savegame)];
 			StringCbPrintfA(strTitle, sizeof(buf_icon_sys->title_name_of_savegame), "%s", (buf_icon_sys->title_name_of_savegame));
 			//文字コード変換
-			CA2T tstrTitle(strTitle);
+			CA2T tstrTitle(strTitle, 932);
 			LVITEM lvi = { 0, };
 			lvi.pszText = tstrTitle;
 			lvi.mask = LVIF_TEXT;
@@ -823,7 +823,7 @@ BOOL UpdateDataList(PS2MEMORYCARD* data)
 			char strTitle[0x5f - 0x03];
 			StringCchCopyA(strTitle, sizeof(strTitle), (char*)&buf[4]);
 			//文字コード変換
-			CA2T tstrTitle(strTitle);
+			CA2T tstrTitle(strTitle, 932);
 
 			LVITEM lvi = { 0, };
 			lvi.pszText = tstrTitle;
@@ -868,7 +868,7 @@ BOOL UpdateDataListfromCard(PS2MEMORYCARD* data)
 					char strTitle[256];
 					StringCchCopyA(strTitle, sizeof(strTitle) / sizeof(strTitle[0]), dirent.name);
 					//文字コード変換
-					CA2T wstrTitle(strTitle);
+					CA2T wstrTitle(strTitle, 932);
 					LVITEM lvi = { 0, };
 					lvi.pszText = wstrTitle;
 					lvi.mask = LVIF_TEXT;
@@ -908,7 +908,7 @@ BOOL UpdateDataListfromCard(PS2MEMORYCARD* data)
 										char strTitle[sizeof(buf_icon_sys->title_name_of_savegame)];
 										StringCbPrintfA(strTitle, sizeof(buf_icon_sys->title_name_of_savegame), "%s", (buf_icon_sys->title_name_of_savegame));
 										//文字コード変換
-										CA2T tstrTitle(strTitle);
+										CA2T tstrTitle(strTitle, 932);
 										LVITEM lvi = { 0, };
 										lvi.pszText = tstrTitle;
 										lvi.mask = LVIF_TEXT;
@@ -921,7 +921,7 @@ BOOL UpdateDataListfromCard(PS2MEMORYCARD* data)
 										char strTitle[0x5f - 0x03];
 										StringCchCopyA(strTitle, sizeof(strTitle), (char*)&buf[4]);
 										//文字コード変換
-										CA2T tstrTitle(strTitle);
+										CA2T tstrTitle(strTitle, 932);
 
 										LVITEM lvi = { 0, };
 										lvi.pszText = tstrTitle;

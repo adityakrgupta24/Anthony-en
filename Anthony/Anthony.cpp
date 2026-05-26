@@ -738,7 +738,7 @@ BOOL UpdateDataList(MEMORYCARD* data)
 				//strcpy_s(strTitle, sizeof(strTitle), (char*)&data->Block[i][4]);
 				StringCchCopyA(strTitle, sizeof(strTitle), (char*)&data->Block[i][4]);
 				//•¶šƒR[ƒh•ÏŠ·
-				CA2T wstrTitle(strTitle);
+				CA2T wstrTitle(strTitle, 932);
 
 				lvi.pszText = wstrTitle;
 				lvi.mask = LVIF_TEXT;
